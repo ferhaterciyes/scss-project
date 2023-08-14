@@ -1,0 +1,59 @@
+.navbar {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+  &-logo {
+    font-size: 2rem;
+    margin: 0 30px;
+    color: var(--text-color);
+    span {
+      color: var(--span-color);
+    }
+  }
+  &-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    li {
+      margin: 0 15px;
+    }
+    a {
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 15px;
+      cursor: pointer;
+      color: var(--text-color-white);
+      font-weight: 300;
+      transition: 0.5s ease;
+      position: relative;
+      letter-spacing: 2px;
+    }
+    a::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 2px;
+      border-radius: 50px;
+      background-color: var(--span-color);
+      left: 0;
+      bottom: -10px;
+      transform-origin: left;
+      transition: 0.5s ease;
+    }
+    a:hover::after {
+      width: 100%;
+    }
+
+    a:hover {
+      color: var(--span-color);
+    }
+  }
+}
